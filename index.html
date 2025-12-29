@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Soundboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      max-width: 900px;
+      margin: auto;
+    }
+    button {
+      padding: 15px;
+      font-size: 15px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      background: #ff4757;
+      color: white;
+    }
+    button:hover {
+      background: #ff6b81;
+    }
+  </style>
+</head>
+<body>
+
+<h1>🎵 Movie & Music Soundboard</h1>
+
+<div class="board">
+  <button onclick="play('over_the_rainbow')">Over the Rainbow</button>
+  <button onclick="play('jurassic_park')">Jurassic Park Theme</button>
+  <button onclick="play('happy')">Happy</button>
+  <button onclick="play('pure_imagination')">Pure Imagination</button>
+  <button onclick="play('everything_is_awesome')">Everything Is Awesome</button>
+  <button onclick="play('grinch')">Grinch</button>
+  <button onclick="play('once_upon_a_december')">Once Upon a December</button>
+  <button onclick="play('cant_stop_the_feeling')">Can’t Stop the Feeling</button>
+  <button onclick="play('let_it_grow')">Let It Grow</button>
+  <button onclick="play('titanic')">Titanic</button>
+  <button onclick="play('sodapop')">Sodapop</button>
+  <button onclick="play('this_is_halloween')">This Is Halloween</button>
+  <button onclick="play('rick_roll')">Rick Roll</button>
+  <button onclick="play('gummy_bear')">Gummy Bear</button>
+</div>
+
+<audio id="over_the_rainbow" src="sounds/over_the_rainbow.mp3"></audio>
+<audio id="jurassic_park" src="sounds/jurassic_park.mp3"></audio>
+<audio id="happy" src="sounds/happy.mp3"></audio>
+<audio id="pure_imagination" src="sounds/pure_imagination.mp3"></audio>
+<audio id="everything_is_awesome" src="sounds/everything_is_awesome.mp3"></audio>
+<audio id="grinch" src="sounds/grinch.mp3"></audio>
+<audio id="once_upon_a_december" src="sounds/once_upon_a_december.mp3"></audio>
+<audio id="cant_stop_the_feeling" src="sounds/cant_stop_the_feeling.mp3"></audio>
+<audio id="let_it_grow" src="sounds/let_it_grow.mp3"></audio>
+<audio id="titanic" src="sounds/titanic.mp3"></audio>
+<audio id="sodapop" src="sounds/sodapop.mp3"></audio>
+<audio id="this_is_halloween" src="sounds/this_is_halloween.mp3"></audio>
+<audio id="rick_roll" src="sounds/rick_roll.mp3"></audio>
+<audio id="gummy_bear" src="sounds/gummy_bear.mp3"></audio>
+
+<script>
+function play(id) {
+  const sound = document.getElementById(id);
+  sound.currentTime = 0;
+  sound.play();
+}
+</script>
+
+</body>
+</html>
